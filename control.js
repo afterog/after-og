@@ -28,3 +28,19 @@
 // // Add a scroll event listener to the window
 // window.addEventListener("scroll", onScroll);
 
+const cards = document.querySelectorAll('.card')
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    entry.target.classList.toggle("show", entry.isIntersecting)
+  })
+},
+{
+  threshold: .5,
+  rootMargin: '50px'
+},
+)
+
+cards.forEach( card => {
+  observer.observe(card)
+})
