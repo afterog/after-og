@@ -6,7 +6,7 @@
     position: sticky;
     top: 0;
     z-index: 99;
-    background: #0d0d0d;
+    background: var(--color-primary);
     justify-content: space-between;
 }
 
@@ -26,7 +26,7 @@
 
 .navbar-list a {
     text-decoration: none;
-    color: #f60d54;
+    color: var(--color-secondary);
 }
 
 .navbar-toggler {
@@ -36,7 +36,7 @@
 .logo {
     font-size: 24px;
     font-weight: bold;
-    color: #46592A;
+    color: var(--color-secondary);
     text-decoration: none;
     position: relative;
     left: 30px;
@@ -44,7 +44,7 @@
   }
   
   .logo:hover {
-    color: #ffc107; /* change color on hover */
+    color: #fff; /* change color on hover */
     transform: scale(1.1); /* add a scaling animation on hover */
   }
 

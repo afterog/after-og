@@ -1,7 +1,7 @@
 @font-face {
     font-display: auto;
     font-family: 'Roboto';
-    src: url('./Roboto/Roboto-Regular.ttf');
+    src: url('./../Roboto/Roboto-Regular.ttf');
 }
 
 * {
@@ -13,8 +13,20 @@
 :root {
     --animate-duration: 300ms;
     --animate-delay: 0.2ms;
+    --color-primary: #191d2b;
+    --color-secondary: #27AE60;
+    --color-white: #FFFFFF;
+    --color-black: #000;
+    --color-grey0: #f8f8f8;
+    --color-grey-1: #dbe1e8;
+    --color-grey-2: #b2becd;
+    --color-grey-3: #6c7983;
+    --color-grey-4: #454e56;
+    --color-grey-5: #2a2e35;
+    --color-grey-6: #12181b;
+    --br-sm-2: 14px;
+    --box-shadow-1: 0 3px 15px rgba(0,0,0,.3);
 }
-
 body {
     background: #0d0d0d;
     font-family: 'Roboto';
@@ -86,7 +98,7 @@ html {
     background: #f9f0f0;
     box-shadow: 5px 5px 18px #d6cdcd,
         -5px -5px 18px #d1c9c9;
-    background-image: url('./asset/experiance.svg');
+    background-image: url('./../asset/experiance.svg');
     background-repeat: no-repeat;
     background-size: contain;
 }
@@ -140,6 +152,32 @@ html {
     transition: 150ms;
     position: relative;
 }
+
+
+.main-title {
+    text-align: center;
+  }
+  .main-title h2 {
+    position: relative;
+    text-transform: uppercase;
+    font-size: 4rem;
+    font-weight: 700;
+  }
+  .main-title h2 span {
+    color: #fff;
+  }
+  .main-title h2 .bg-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: #333;
+    transition: all 0.4s ease-in-out;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+    font-weight: 800;
+    font-size: 6.3rem;
+  }
+  
 
 .card.show {
     opacity: 1;
