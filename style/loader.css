@@ -109,11 +109,10 @@
   }
 }
 
-h2 {
+.load-text {
   justify-self: self-end;
   position: relative;
   top: 150px;
-  /* right: 75px; */
 }
 
 @media screen and (max-width: 800px) {
