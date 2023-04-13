@@ -60,4 +60,6 @@ nav.addEventListener("blur", (event) => {
   handleNavBarClik()
 }, true);
 
+
+
 toggler_btn.addEventListener('click', handleNavBarClik)
