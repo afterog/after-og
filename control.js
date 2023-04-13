@@ -1,46 +1,55 @@
-// // Get all elements with the 'my-element' class
-// const myElements = document.querySelectorAll(".my-element");
-
-// // Function to check if an element is within the viewport
-// function isInViewport(element) {
-//   const rect = element.getBoundingClientRect();
-//   return (
-//     rect.top >= 0 &&
-//     rect.left >= 0 &&
-//     rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-//     rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-//   );
-// }
-
-// // Function to handle the scroll event
-// function onScroll() {
-//   myElements.forEach(element => {
-//     if (isInViewport(element)) {
-//       // element.classList.add('animate__flipInX')
-//       element.style.opacity = 1;
-//     } else {
-//       // element.classList.remove('animate__flipInX')
-//       element.style.opacity = 0;
-//     }
-//   });
-// }
-
-// // Add a scroll event listener to the window
-// window.addEventListener("scroll", onScroll);
-
+// html elements declaration
 const cards = document.querySelectorAll('.card')
+const toggler_btn = document.querySelector('.navbar-toggler')
+const logo = document.querySelector('.logo')
+const nav = document.querySelector('.navbar')
+const navbar_list = document.querySelector('.navbar-list')
+const icon = document.querySelector('.icon')
+const swap = icon.innerHTML
+let isOpen = false
 
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     entry.target.classList.toggle("show", entry.isIntersecting)
   })
 },
-{
-  threshold: .5,
-  rootMargin: '50px'
-},
+  {
+    threshold: .8,
+    rootMargin: '50px'
+  },
 )
 
-cards.forEach( card => {
+cards.forEach(card => {
   observer.observe(card)
 })
+
+//function that handle the navbar open and close in mobile devices
+const handleNavBarClik = (e) => {
+  isOpen = !isOpen
+  if (isOpen) {
+    nav.classList.add('fix')
+    logo.classList.add('hide')
+    navbar_list.classList.add('show')
+    navbar_list.classList.remove('hide')
+    icon.innerHTML = `<svg className="feather feather-x" fill="none" height="24" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+      <line x1="18" x2="6" y1="6" y2="18" />
+      <line x1="6" x2="18" y1="6" y2="18" />
+    </svg>`
+
+  }
+  else {
+    nav.classList.remove('fix')
+    logo.classList.remove('hide')
+    navbar_list.classList.remove('show')
+    navbar_list.classList.add('hide')
+    icon.innerHTML = swap
+    nav.removeEventListener('blur', handleNavBarClik, false)
+  }
+}
+
+nav.addEventListener("blur", (event) => {
+  isOpen = true
+  handleNavBarClik()
+}, true);
+
+toggler_btn.addEventListener('click', handleNavBarClik)

@@ -1,9 +1,3 @@
-@font-face {
-    font-display: auto;
-    font-family: 'Roboto';
-    src: url('./Roboto/Roboto-Regular.ttf');
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -17,12 +11,11 @@
 
 body {
     background: #0d0d0d;
-    font-family: 'Roboto';
+
 }
 
 html {
     scroll-behavior: smooth;
-    font-size: 16px;
 }
 
 .container {
@@ -36,7 +29,6 @@ html {
     display: flex;
     align-items: center;
     padding: 2em;
-    overflow-x: hidden;
 }
 
 .container-child:nth-child(2) {
@@ -62,10 +54,11 @@ html {
 }
 
 .pp {
-    width: min(20em, 25em);
+    width: 25em;
+    aspect-ratio: 2 / 1.7;
     border-radius: 5px;
     background: #4f4a4a;
-    box-shadow: 5px 5px 18px #262b24d7,
+    box-shadow: 5px 5px 18px #232721d7,
         -5px -5px 18px #191c17;
 }
 
@@ -93,15 +86,6 @@ html {
 
 .skills {
     color: #e9e8ec;
-    flex-direction: row-reverse;
-}
-
-.projects,
-.education {
-    color: #fff;
-}
-
-.education {
     flex-direction: row-reverse;
 }
 
@@ -134,29 +118,22 @@ html {
     line-height: 1.8em;
 }
 
-.card {
+.card{
     opacity: 0;
     transform: translateX(100px);
     transition: 150ms;
-    position: relative;
 }
 
-.card.show {
+.card.show{
     opacity: 1;
     transform: translateX(0);
 }
 
 @media (max-width: 1000px) {
-
-    html{
-        font-size: 13px;
-    }
-
-    .container {
+    .container{
         width: 100%;
         height: 100%;
     }
-
     .container-child {
         width: 100%;
         min-height: 100vh;
@@ -182,9 +159,5 @@ html {
         width: 100%;
         height: 100%;
     }
-
-    .card {
-        opacity: 1;
-        transform: translateX(0);
-    }
 }
+
