@@ -5,8 +5,16 @@ const logo = document.querySelector('.logo')
 const nav = document.querySelector('.navbar')
 const navbar_list = document.querySelector('.navbar-list')
 const icon = document.querySelector('.icon')
+const loader = document.querySelector('#loader')
 const swap = icon.innerHTML
 let isOpen = false
+
+const handleLoading = e => {
+  loader.style.display = 'none'
+  // document.querySelector('.container').innerHTML = `<h1> Alexoo</h1>`
+}
+
+window.addEventListener('load', handleLoading)
 
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {

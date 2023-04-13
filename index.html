@@ -9,14 +9,28 @@
     <link rel="stylesheet" href="style/navbar.css">
     <link rel="stylesheet" href="style/header.css">
     <link rel="stylesheet" href="style/feedback.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/loader.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <title>After Og</title>
 
 </head>
 
 <body>
+
+    <div id="loader">
+        <div class="pencil">
+            <div class="pencil__ball-point"></div>
+            <div class="pencil__cap"></div>
+            <div class="pencil__cap-base"></div>
+            <div class="pencil__middle"></div>
+            <div class="pencil__eraser"></div>
+        </div>
+        <div class="line"></div>
+        <h2>Page Loading...Please Wait</h2>
+    </div>
     <div class="container">
-     
+
         <div class="container-child home">
             <header class="cnt header active" id="home">
                 <div class="header-content">
@@ -46,7 +60,7 @@
                 </div>
             </header>
         </div>
-        <nav  class="navbar">
+        <nav class="navbar">
             <a href="#home" class="logo">Twod/></a>
             <ul class="navbar-list hide">
                 <li>
@@ -61,12 +75,16 @@
             </ul>
             <button class="navbar-toggler btn" type="button">
                 <span class="icon">
-                    
-                        <svg class="feather feather-grid" fill="none" height="24" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-                            <rect height="7" width="7" x="3" y="3" /><rect height="7" width="7" x="14" y="3" />
-                            <rect height="7" width="7" x="14" y="14" /><rect height="7" width="7" x="3" y="14" />
-                        </svg>
-                
+
+                    <svg class="feather feather-grid" fill="none" height="24" stroke="currentColor"
+                        strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" width="24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <rect height="7" width="7" x="3" y="3" />
+                        <rect height="7" width="7" x="14" y="3" />
+                        <rect height="7" width="7" x="14" y="14" />
+                        <rect height="7" width="7" x="3" y="14" />
+                    </svg>
+
                 </span>
             </button>
         </nav>
@@ -169,7 +187,7 @@
                     <div class="left-contact">
                         <h4>Contact me here</h4>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
                             In, laborum numquam? Quam excepturi perspiciatis quas quasi.
                         </p>
                         <div class="contact-info">
