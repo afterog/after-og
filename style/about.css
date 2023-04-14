@@ -1,3 +1,6 @@
+.about{
+  padding: 2em;
+}
 .about-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -61,9 +64,9 @@
     text-transform: uppercase;
   }
   
-  .about-stats {
-    padding-bottom: 4rem;
-  }
+    .about-stats {
+      padding-bottom: 4rem;
+    }
   .about-stats .progress-bars {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
