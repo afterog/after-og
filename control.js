@@ -1,5 +1,5 @@
 // html elements declaration
-const cards = document.querySelectorAll('.card')
+
 const toggler_btn = document.querySelector('.navbar-toggler')
 const logo = document.querySelector('.logo')
 const nav = document.querySelector('.navbar')
@@ -11,25 +11,10 @@ let isOpen = false
 
 const handleLoading = e => {
   loader.style.display = 'none'
-  // document.querySelector('.container').innerHTML = `<h1> Alexoo</h1>`
 }
 
 window.addEventListener('load', handleLoading)
 
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    entry.target.classList.toggle("show", entry.isIntersecting)
-  })
-},
-  {
-    threshold: .8,
-    rootMargin: '50px'
-  },
-)
-
-cards.forEach(card => {
-  observer.observe(card)
-})
 
 //function that handle the navbar open and close in mobile devices
 const handleNavBarClik = (e) => {
@@ -55,11 +40,9 @@ const handleNavBarClik = (e) => {
   }
 }
 
-nav.addEventListener("blur", (event) => {
-  isOpen = true
-  handleNavBarClik()
-}, true);
+// nav.addEventListener("blur", (event) => {
+//   isOpen = true
+//   handleNavBarClik()
+// }, true);
 
-
-
-toggler_btn.addEventListener('click', handleNavBarClik)
+// toggler_btn.addEventListener('click', handleNavBarClik)

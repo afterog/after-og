@@ -39,6 +39,11 @@
     gap: 5em;
   }
 
+  .image{
+    background-position: center;
+    background-size: contain;
+    box-shadow: var(--box-shadow-1);
+  }
 
   .header-content .left-header {
     display: flex;

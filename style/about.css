@@ -1,5 +1,6 @@
 .about{
   padding: 2em;
+  color: var(--color-white);
 }
 .about-container {
     display: grid;
@@ -193,6 +194,13 @@
   .port-text {
     padding: 2rem 0;
     text-align: center;
+  }
+
+  .submit-btn.main-btn{
+    width: 40%;
+    height: 50px;
+    background: var(--color-secondary);
+    color: black;
   }
 
   @media screen and (max-width: 1070px) {

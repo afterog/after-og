@@ -25,10 +25,11 @@
     --color-grey-5: #2a2e35;
     --color-grey-6: #12181b;
     --br-sm-2: 14px;
-    --box-shadow-1: 0 3px 15px rgba(0,0,0,.3);
+    --box-shadow-1: 0 3px 15px rgba(0, 0, 0, .3);
 }
+
 body {
-    background: #0d0d0d;
+    background: #1e1e1e;
     font-family: 'Roboto';
 }
 
@@ -40,12 +41,15 @@ html {
 .container {
     min-height: 100vh;
     width: 100%;
+    display: grid;
+    gap: 8em;
 }
 
 .container-child {
     width: 100%;
-    min-height: 100vh;
+    min-height: fit-content;
     display: flex;
+    justify-content: center;
     align-items: center;
     padding: 2em;
     overflow-x: hidden;
@@ -62,67 +66,37 @@ html {
     align-items: center;
     text-align: left;
     padding: 2em;
-    width: 100%;
+    width: 80%;
     height: 100%;
+    color: #e9e8ec;
 }
 
-.who-am-i {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color: #31312f;
-    color: #d1c9c9;
-}
+
 
 .pp {
     width: min(20em, 25em);
     border-radius: 5px;
     background: #4f4a4a;
-    box-shadow: 5px 5px 18px #262b24d7,
-        -5px -5px 18px #191c17;
+    box-shadow: var(--box-shadow-1);
 }
 
-.experiance {
-    background-color: #e9e8ec;
-    color: #191c17;
-}
-
-.experiance>.parag>h1 {
-    color: #000;
-}
 
 .img {
     width: 20em;
     aspect-ratio: 1.5 / 1;
     border-radius: 2em;
     border-radius: 5px;
-    background: #f9f0f0;
-    box-shadow: 5px 5px 18px #d6cdcd,
-        -5px -5px 18px #d1c9c9;
     background-image: url('./../asset/experiance.svg');
     background-repeat: no-repeat;
     background-size: contain;
 }
 
 .skills {
-    color: #e9e8ec;
     flex-direction: row-reverse;
-}
-
-.projects,
-.education {
-    color: #fff;
 }
 
 .education {
     flex-direction: row-reverse;
-}
-
-.img2 {
-    background-image: url('./../asset/progress-indicator.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: #333229;
 }
 
 .parag {
@@ -133,10 +107,12 @@ html {
 
 .parag>h1 {
     align-self: baseline;
+    color: var(--color-secondary);
 }
 
 .parag:nth-child(1)>h1 {
     color: #aa4043;
+    color: var(--color-secondary);
 }
 
 .parag>p {
@@ -146,27 +122,25 @@ html {
     line-height: 1.8em;
 }
 
-.card {
-    opacity: 0;
-    transform: translateX(100px);
-    transition: 150ms;
-    position: relative;
-}
+
 
 
 .main-title {
     text-align: center;
-  }
-  .main-title h2 {
+}
+
+.main-title h2 {
     position: relative;
     text-transform: uppercase;
     font-size: 4rem;
     font-weight: 700;
-  }
-  .main-title h2 span {
+}
+
+.main-title h2 span {
     color: #fff;
-  }
-  .main-title h2 .bg-text {
+}
+
+.main-title h2 .bg-text {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -176,9 +150,14 @@ html {
     transform: translate(-50%, -50%);
     font-weight: 800;
     font-size: 6.3rem;
-  }
-  
+}
 
+.card {
+    opacity: 0;
+    transform: translateX(100px);
+    transition: 150ms;
+    position: relative;
+}
 .card.show {
     opacity: 1;
     transform: translateX(0);
@@ -186,13 +165,14 @@ html {
 
 @media (max-width: 1000px) {
 
-    html{
+    html {
         font-size: 13px;
     }
 
     .container {
         width: 100%;
         height: 100%;
+        gap: 2;
     }
 
     .container-child {
@@ -203,10 +183,16 @@ html {
     }
 
     .container-child:nth-child(2) {
-        flex-direction: column-reverse;
+        flex-direction: column;
     }
 
-    .container-child:nth-child(3) {
+    .experiance {
+        flex-direction: column-reverse;
+    }
+    .projects {
+        flex-direction: column-reverse;
+    }
+    .education {
         flex-direction: column-reverse;
     }
 
@@ -222,7 +208,14 @@ html {
     }
 
     .card {
+        opacity: 0;
+        transform: translateX(100px);
+        transition: 150ms;
+        position: relative;
+    }
+    .card.show {
         opacity: 1;
         transform: translateX(0);
     }
+    
 }
