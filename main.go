@@ -7,7 +7,7 @@ import (
 func main() {
     // Serve index.html file
     http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-        http.ServeFile(w, r, "home.html")
+        http.ServeFile(w, r, "index.html")
     })
 
     // Serve static files in "static" directory
