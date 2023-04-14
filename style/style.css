@@ -29,13 +29,13 @@
 }
 
 body {
-    background: #1e1e1e;
+    background: var(--color-primary);
     font-family: 'Roboto';
 }
 
 html {
     scroll-behavior: smooth;
-    font-size: 16px;
+    font-size: 20px;
 }
 
 .container {
@@ -43,6 +43,10 @@ html {
     width: 100%;
     display: grid;
     gap: 8em;
+}
+
+a{
+    text-decoration: none;
 }
 
 .container-child {
