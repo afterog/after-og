@@ -200,7 +200,7 @@
     width: 40%;
     height: 50px;
     background: var(--color-secondary);
-    color: black;
+    color: var(--color-black);
   }
 
   @media screen and (max-width: 1070px) {

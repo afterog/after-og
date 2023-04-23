@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="static/style/feedback.css">
     <link rel="stylesheet" href="static/style/loader.css">
     <link rel="stylesheet" href="static/style/about.css">
+    <link rel="stylesheet" href="static/style/control.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
@@ -33,6 +34,7 @@
         <div class="line"></div>
         <h2 class="load-text">Page Loading...Please Wait</h2>
     </div>
+
     <div class="container">
 
         <div class="container-child home">
@@ -64,34 +66,8 @@
                 </div>
             </header>
         </div>
-        <!-- <nav class="navbar">
-            <a href="#home" class="logo">Twod/></a>
-            <ul class="navbar-list hide">
-                <li>
-                    <a href="#">Home</a>
-                </li>
-                <li>
-                    <a href="#about">About Me</a>
-                </li>
-                <li>
-                    <a href="#contact">Contact Me</a>
-                </li>
-            </ul>
-            <button class="navbar-toggler btn" type="button">
-                <span class="icon">
+        <hr>
 
-                    <svg class="feather feather-grid" fill="none" height="24" stroke="currentColor"
-                        strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" width="24"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <rect height="7" width="7" x="3" y="3" />
-                        <rect height="7" width="7" x="14" y="3" />
-                        <rect height="7" width="7" x="14" y="14" />
-                        <rect height="7" width="7" x="3" y="14" />
-                    </svg>
-
-                </span>
-            </button>
-        </nav> -->
         <div class="container-child who-am-i">
             <div class="parag">
                 <h1 class="card">Who am i</h1>
@@ -117,6 +93,7 @@
                 <img class="pp" src="./static/asset/alex.jpg" alt="">
             </div>
         </div>
+        <hr>
         <!--  -->
         <div class="container-child experiance">
             <div class="card img-container">
@@ -140,9 +117,10 @@
                 </p>
             </div>
         </div>
+        <hr>
         <!--  -->
         <div class="container-child skills">
-            <section class=" about" id="about">
+            <section class="about" id="about">
                 <div class="main-title">
                     <h2>About <span>me</span><span class="bg-text">my stats</span></h2>
                 </div>
@@ -197,6 +175,7 @@
                         </div>
                     </div>
                 </div>
+                <hr>
                 <div class="about-stats">
                     <h4 class="stat-title">My Skills</h4>
                     <div class="progress-bars">
@@ -256,14 +235,15 @@
                         </div>
                     </div>
                 </div>
+                <hr>
                 <h4 class="stat-title">My Timeline</h4>
                 <div class="timeline">
                     <div class="timeline-item card">
                         <div class="tl-icon">
                             <i class="fas fa-briefcase"></i>
                         </div>
-                        <p class="tl-duration">2010 - present</p>
-                        <h5>Web Developer<span> - Vircrosoft</span></h5>
+                        <p class="tl-duration">2023 - present</p>
+                        <h5>Web Developer<span> - Freelancer</span></h5>
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe quasi vero fugit.
                         </p>
@@ -272,8 +252,8 @@
                         <div class="tl-icon">
                             <i class="fas fa-briefcase"></i>
                         </div>
-                        <p class="tl-duration">2008 - 2011</p>
-                        <h5>Software Engineer<span> - Boogle, Inc.</span></h5>
+                        <p class="tl-duration">2022 - 2023</p>
+                        <h5>front-end<span> - Solo learn</span></h5>
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe quasi vero fugit.
                         </p>
@@ -321,6 +301,7 @@
                 </div>
             </section>
         </div>
+        <hr>
         <!--  -->
         <div class="container-child projects">
             <div class="img-container card">
@@ -346,6 +327,7 @@
                 </p>
             </div>
         </div>
+        <hr>
         <!--  -->
         <div class="container-child education">
             <div class="img-container card">
@@ -371,6 +353,7 @@
                 </p>
             </div>
         </div>
+        <hr>
 
         <section class="container-child contact" id="contact">
             <div class="contact-container">
@@ -448,6 +431,7 @@
                             </div>
                         </div>
                     </div>
+                    <hr>
                     <div class="right-contact">
                         <form class="contact-form">
                             <div class="input-control i-c-2 card">
@@ -468,6 +452,27 @@
                 </div>
             </div>
         </section>
+
+        <div class="controls">
+            <div class="control active-btn" data-id="home">
+                <i class="fas fa-home"></i>
+            </div>
+            <div class="control" data-id="about">
+                <i class="fas fa-user"></i>
+            </div>
+            <div class="control" data-id="portfolio">
+                <i class="fas fa-briefcase"></i>
+            </div>
+            <div class="control" data-id="blogs">
+                <i class="far fa-newspaper"></i>
+            </div>
+            <div class="control" data-id="contact">
+                <i class="fas fa-envelope-open"></i>
+            </div>
+        </div>
+        <div class="theme-btn">
+            <i class="fas fa-adjust"></i>
+        </div>
 
     </div>
     <script src="/static/control/control.js"></script>

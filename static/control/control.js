@@ -9,11 +9,13 @@ const loader = document.querySelector('#loader')
 const swap = icon.innerHTML
 let isOpen = false
 
+
 const handleLoading = e => {
   loader.style.display = 'none'
 }
 
 window.addEventListener('load', handleLoading)
+
 
 
 //function that handle the navbar open and close in mobile devices
@@ -40,9 +42,16 @@ const handleNavBarClik = (e) => {
   }
 }
 
-// nav.addEventListener("blur", (event) => {
-//   isOpen = true
-//   handleNavBarClik()
-// }, true);
-
-// toggler_btn.addEventListener('click', handleNavBarClik)
+(function () {
+  [...document.querySelectorAll(".control")].forEach(button => {
+    button.addEventListener("click", function () {
+      document.querySelector(".active-btn").classList.remove("active-btn");
+      this.classList.add("active-btn");
+      document.querySelector(".active").classList.remove("active");
+      document.getElementById(button.dataset.id).classList.add("active");
+    })
+  });
+  document.querySelector(".theme-btn").addEventListener("click", () => {
+    document.body.classList.toggle("light-mode");
+  })
+})();
