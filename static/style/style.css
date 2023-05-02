@@ -40,16 +40,24 @@
     --color-grey-4: #454e56;
     --color-grey-5: #f8f8f8;
     --color-grey-6: #12181b;
-  }
+}
 
 body {
     background: var(--color-primary);
     font-family: 'Roboto';
+    text-overflow: wrap;
 }
 
 html {
     scroll-behavior: smooth;
     font-size: 20px;
+}
+
+.pixel {
+    color: var(--color-secondary);
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.4rem;
 }
 
 .container {
@@ -90,15 +98,12 @@ a {
     color: var(--color-white);
 }
 
-
-
 .pp {
     width: min(20em, 25em);
     border-radius: 5px;
     background: var(--color-grey-5);
     box-shadow: var(--box-shadow-1);
 }
-
 
 .img {
     width: 20em;
@@ -110,12 +115,23 @@ a {
     background-size: contain;
 }
 
+.experiance {
+    margin-right: 5em;
+}
+
 .skills {
     flex-direction: row-reverse;
+    margin-right: 5em;
+
 }
 
 .education {
     flex-direction: row-reverse;
+    margin-right: 5em;
+}
+
+.projects {
+    margin-right: 5em;
 }
 
 .parag {
@@ -209,14 +225,20 @@ hr {
 
     .experiance {
         flex-direction: column-reverse;
+        margin-right: 0;
     }
 
     .projects {
         flex-direction: column-reverse;
+        margin-right: 0;
     }
 
     .education {
         flex-direction: column-reverse;
+        margin-right: 0;
+    }
+    .skills{
+        margin-right: 0;
     }
 
     .container-child>div {
