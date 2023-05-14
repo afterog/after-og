@@ -10,6 +10,7 @@ const observer = new IntersectionObserver(entries => {
     })
 }, options)
 
+
 cards.forEach(card => {
     observer.observe(card)
 })
