@@ -87,7 +87,7 @@ a {
     flex-direction: row;
 }
 
-.container-child>div {
+.container-child>div{
     display: flex;
     flex-direction: column;
     justify-content: center;

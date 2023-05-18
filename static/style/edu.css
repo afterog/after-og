@@ -3,24 +3,22 @@
 .time-line {
     display: block;
     width: 80%;
-    margin: 50px auto;
+    margin: 10px auto;
 }
 
 .time-line .heading {
     margin-bottom: 10px;
 }
-
-.heading {
+.heading{
     color: var(--color-secondary);
 }
-
 .sticky-card {
-    width: 39%;
+    width: 40%;
     padding: 30px;
     border-radius: 10px;
     color: #fff;
     display: block;
-    margin: -80px 0;
+    margin: -80px 75px;
     position: relative;
     background: #f00;
 }
@@ -109,7 +107,7 @@
     top: 0;
     width: 0px;
     height: 100%;
-    border: 1px dashed #000;
+    border: 1px dashed #dad3d3;
     z-index: -1;
 }
 
@@ -122,6 +120,7 @@
 @media (max-width: 800px) {
     .timeline {
         width: 100%;
+        height: auto;
         display: grid;
         grid-template-columns: 1fr;
     }
@@ -162,7 +161,7 @@
     }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
     .time-line {
         width: 80%;
         display: grid;
@@ -204,9 +203,9 @@
         border: 5px solid #191919;
         border-radius: 50%;
     }
-/* 
+
     .sticky-card.card {
         opacity: 1;
         transform: translateX(0px) scale(1);
-    } */
+    }
 }
