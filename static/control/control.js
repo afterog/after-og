@@ -35,3 +35,17 @@ const handleLoading = e => {
 }
 
 window.addEventListener('load', handleLoading);
+
+document.querySelector('.submit-btn').addEventListener('click', event => {
+  event.preventDefault();
+  const [fullName, email, subject, message] = [...document.querySelectorAll('.input-value')].map(element => element.value);
+  if (fullName && email && subject && message) {
+    const data = fetch('http://127.0.0.1:4000/getter')
+      .then(res => res.json())
+      .then(data => {
+        return data;
+      });
+
+    console.log(data);
+  }
+})
