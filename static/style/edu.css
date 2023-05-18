@@ -203,4 +203,9 @@
         border: 5px solid #191919;
         border-radius: 50%;
     }
+
+    .sticky-card.card {
+        opacity: 1;
+        transform: translateX(0px) scale(1);
+    }
 }
