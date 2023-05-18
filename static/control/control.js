@@ -1,6 +1,22 @@
-
-
 (function () {
+  const cards = document.querySelectorAll('.card');
+  const options = {
+    rootMargin: '0px',
+    threshold: 0.5 // change the threshold value to 0.5
+  };
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      entry.target.classList.toggle("show", entry.isIntersecting)
+    })
+  }, options);
+  cards.forEach(card => {
+    observer.observe(card)
+  });
+  if (window.matchMedia('(max-width: 600px)').matches) {
+    observer.threshold = 0.2;
+  };
+
+
   [...document.querySelectorAll('.control')].forEach(el => {
     el.addEventListener('click', e => {
       e.preventDefault();
@@ -19,11 +35,3 @@ const handleLoading = e => {
 }
 
 window.addEventListener('load', handleLoading);
-// html elements declaration
-const toggler_btn = document.querySelector('.navbar-toggler')
-const logo = document.querySelector('.logo')
-const nav = document.querySelector('.navbar')
-const navbar_list = document.querySelector('.navbar-list')
-const icon = document.querySelector('.icon')
-const swap = icon.innerHTML
-let isOpen = false

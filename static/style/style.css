@@ -64,9 +64,9 @@ html {
     min-height: 100vh;
     width: 100%;
     display: grid;
-    gap: 6em;
     place-items: center;
     display: none;
+    gap: 6em;
 }
 
 a {
