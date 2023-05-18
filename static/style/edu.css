@@ -107,7 +107,7 @@
     top: 0;
     width: 0px;
     height: 100%;
-    border: 1px dashed #dad3d3;
+    border: 1px dashed var(--color-secondary);
     z-index: -1;
 }
 
@@ -202,10 +202,5 @@
         height: 0;
         border: 5px solid #191919;
         border-radius: 50%;
-    }
-
-    .sticky-card.card {
-        opacity: 1;
-        transform: translateX(0px) scale(1);
     }
 }
