@@ -9,9 +9,11 @@
 .time-line .heading {
     margin-bottom: 10px;
 }
-.heading{
+
+.heading {
     color: var(--color-secondary);
 }
+
 .sticky-card {
     width: 40%;
     padding: 30px;
@@ -112,53 +114,12 @@
 }
 
 .card-title {
-    font-size: 30px;
+    text-align: center;
+    font-size: 40px;
+    color: #fff;
+    text-transform: capitalize;
     font-weight: 300;
     margin-bottom: 20px;
-}
-
-@media (max-width: 800px) {
-    .timeline {
-        width: 100%;
-        height: auto;
-        display: grid;
-        grid-template-columns: 1fr;
-    }
-
-    .sticky-card {
-        width: 80%;
-        padding: 30px;
-        border-radius: 10px;
-        /* color: #fff; */
-        display: block;
-        position: relative;
-        background: #f00;
-        margin: 0px 0;
-    }
-
-    .sticky-card:nth-child(even):before {
-        content: '';
-        position: absolute;
-        left: -5%;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 0;
-        height: 0;
-        border: 5px solid #191919;
-        border-radius: 50%;
-    }
-
-    .sticky-card:nth-child(odd):before {
-        content: '';
-        position: absolute;
-        right: -5%;
-        top: 50%;
-        transform: translateY(-0%);
-        width: 0;
-        height: 0;
-        border: 5px solid #191919;
-        border-radius: 50%;
-    }
 }
 
 @media (max-width: 1000px) {
@@ -207,5 +168,14 @@
     .sticky-card.card {
         opacity: 1;
         transform: translateX(0px) scale(1);
+    }
+
+    .card-title {
+        text-align: left;
+        font-size: 1.5em;
+        color: #fff;
+        text-transform: capitalize;
+        font-weight: 300;
+        margin-bottom: 10px;
     }
 }

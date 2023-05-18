@@ -75,7 +75,7 @@ a {
 
 .container-child {
     width: 100%;
-    min-height: fit-content;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -83,11 +83,7 @@ a {
     overflow-x: hidden;
 }
 
-.container-child:nth-child(2) {
-    flex-direction: row;
-}
-
-.container-child>div{
+.container-child>.i {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -114,25 +110,6 @@ a {
     background-image: url('./../asset/experiance.svg');
     background-repeat: no-repeat;
     background-size: contain;
-}
-
-.experiance {
-    margin-right: 5em;
-}
-
-.skills {
-    flex-direction: row-reverse;
-    margin-right: 5em;
-
-}
-
-.education {
-    flex-direction: row-reverse;
-    margin-right: 5em;
-}
-
-.projects {
-    margin-right: 5em;
 }
 
 .parag {
@@ -220,29 +197,8 @@ hr {
         flex-direction: column;
     }
 
-    .container-child:nth-child(2) {
-        flex-direction: column;
-    }
 
-    .experiance {
-        flex-direction: column-reverse;
-        margin-right: 0;
-    }
-
-    .projects {
-        flex-direction: column-reverse;
-        margin-right: 0;
-    }
-
-    .education {
-        flex-direction: column-reverse;
-        margin-right: 0;
-    }
-    .skills{
-        margin-right: 0;
-    }
-
-    .container-child>div {
+    .container-child>.i {
         display: flex;
         flex-direction: column;
         justify-content: center;

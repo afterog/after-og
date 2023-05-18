@@ -1,5 +1,4 @@
-
-#loader{
+#loader {
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -17,23 +16,29 @@
   transform: rotate(135deg);
   animation: pencil-animation 10s infinite;
 }
+
 @keyframes pencil-animation {
   0% {
     transform: rotate(135deg);
   }
+
   20% {
     transform: rotate(315deg);
   }
+
   45% {
     transform: translateX(300px) rotate(315deg);
   }
+
   55% {
     transform: translateX(300px) rotate(495deg);
   }
+
   100% {
     transform: rotate(495deg);
   }
 }
+
 .pencil__ball-point {
   position: absolute;
   left: 0;
@@ -44,6 +49,7 @@
   width: 10px;
   border-radius: 50px;
 }
+
 .pencil__cap {
   position: absolute;
   left: 0px;
@@ -54,6 +60,7 @@
   width: 12%;
   height: 100%;
 }
+
 .pencil__cap-base {
   position: absolute;
   left: 12%;
@@ -62,6 +69,7 @@
   width: 20px;
   background: #232123;
 }
+
 .pencil__middle {
   position: absolute;
   left: calc(12% + 20px);
@@ -70,6 +78,7 @@
   width: 70%;
   background: #09d56e;
 }
+
 .pencil__eraser {
   position: absolute;
   left: calc(12% + 70% + 20px);
@@ -94,16 +103,20 @@
   transform-origin: center;
   animation: line-animation 10s infinite;
 }
+
 @keyframes line-animation {
   20% {
     transform: scaleX(0);
   }
+
   45% {
     transform: scaleX(0.6);
   }
+
   55% {
     transform: scaleX(0.6);
   }
+
   100% {
     transform: scaleX(0);
   }
@@ -116,7 +129,7 @@
 }
 
 @media screen and (max-width: 800px) {
-  .line{
+  .line {
     /* width: 400px; */
   }
 }
