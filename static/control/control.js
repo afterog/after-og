@@ -20,7 +20,7 @@
   [...document.querySelectorAll('.control')].forEach(el => {
     el.addEventListener('click', e => {
       e.preventDefault();
-      const url = 'http://127.0.0.1:5500/index.html';
+      const url = 'https://afterog.netlify.app/index.html';
       location.href = url + `#${e.target.getAttribute('data-id')}`;
     });
   });
