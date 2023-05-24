@@ -22,7 +22,7 @@
     el.addEventListener('click', e => {
       e.preventDefault();
       let scrollTo = document.getElementById(e.target.getAttribute('data-id'));
-      scrollTo.scrollIntoView({ behavior: 'smooth' });
+       scrollTo.scrollIntoView({ behavior: 'smooth' });
     });
   });
 
